@@ -2,7 +2,7 @@
   "name": "quasuki-sdk-first-live-run",
   "private": true,
   "version": "0.0.0",
-  "description": "Standalone external consumer proof for quasuki-sdk@0.2.3.",
+  "description": "Standalone external consumer proof for quasuki-sdk@0.2.4.",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=18"
@@ -14,6 +14,6 @@
     "verify": "npm run catalog"
   },
   "dependencies": {
-    "quasuki-sdk": "0.2.3"
+    "quasuki-sdk": "0.2.4"
   }
 }
