@@ -55,7 +55,7 @@ $env:QUASUKI_BASE_URL="https://console.quasuki.com"
 $env:QUASUKI_API_KEY="replace-with-api-key"
 $env:QUASUKI_WALLET_ID="replace-with-wallet-id"
 $env:QUASUKI_WALLET_SECRET="replace-with-wallet-secret"
-$env:QUASUKI_DEMO_TASK_REF="naxytra.zones.list"
+$env:QUASUKI_DEMO_TASK_REF="zones.list"
 $env:QUASUKI_DEMO_COMMAND="list zones"
 $env:QUASUKI_DEMO_SOURCE_ZONE_ID="sandbox-zone"
 $env:QUASUKI_DEMO_TARGET_ZONE_ID="research-zone"
@@ -87,7 +87,7 @@ npm run first-live-run:auto
 
 The paid run executes:
 
-- `task_ref`: `naxytra.zones.list`
+- `task_ref`: `zones.list`
 - `command`: `list zones`
 
 Default request body:
@@ -98,7 +98,7 @@ Default request body:
 
 Optional richer task:
 
-- `task_ref`: `naxytra.admission.preview`
+- `task_ref`: `admission.preview`
 - `command`: `preview admission case`
 
 Admission preview body:

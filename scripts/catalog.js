@@ -10,16 +10,18 @@ async function main() {
   const client = createClient({ baseUrl });
   const catalog = await client.fetchCatalog();
   const tasks = Array.isArray(catalog && catalog.tasks) ? catalog.tasks : [];
+  const categories = Array.isArray(catalog && catalog.task_categories) ? catalog.task_categories : [];
   const summary = {
     captured_at_iso: new Date().toISOString(),
     sdk_name: QUASUKI_SDK_NAME,
     sdk_version: QUASUKI_SDK_VERSION,
     base_url: baseUrl,
-    catalog_version: catalog && catalog.catalog_version ? catalog.catalog_version : null,
+    catalog_version: catalog && (catalog.catalog_version || catalog.version) ? (catalog.catalog_version || catalog.version) : null,
     task_count: tasks.length,
-    sample_task_refs: tasks.slice(0, 8).map((task) => task.task_ref),
-    live_task_ref: "naxytra.zones.list",
-    live_task_present: tasks.some((task) => task && task.task_ref === "naxytra.zones.list")
+    task_categories: categories,
+    sample_task_refs: tasks.slice(0, 8).map((task) => task.public_task_ref || task.task_ref),
+    live_task_ref: "zones.list",
+    live_task_present: tasks.some((task) => task && ((task.public_task_ref || task.task_ref) === "zones.list" || task.task_ref === "naxytra.zones.list"))
   };
 
   const artifactsDir = ensureArtifactsDir();

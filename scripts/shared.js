@@ -22,13 +22,13 @@ function baseUrlFromEnv() {
 }
 
 function buildTaskSelection() {
-  const taskRef = process.env.QUASUKI_DEMO_TASK_REF || "naxytra.zones.list";
-  const command = process.env.QUASUKI_DEMO_COMMAND || (taskRef === "naxytra.admission.preview" ? "preview admission case" : "list zones");
+  const taskRef = process.env.QUASUKI_DEMO_TASK_REF || "zones.list";
+  const command = process.env.QUASUKI_DEMO_COMMAND || (taskRef === "admission.preview" ? "preview admission case" : "list zones");
   return { taskRef, command };
 }
 
 function buildBody(taskRef) {
-  if (taskRef === "naxytra.admission.preview") {
+  if (taskRef === "admission.preview") {
     return {
       source_zone_id: process.env.QUASUKI_DEMO_SOURCE_ZONE_ID || "sandbox-zone",
       target_zone_id: process.env.QUASUKI_DEMO_TARGET_ZONE_ID || "research-zone",
@@ -48,4 +48,3 @@ module.exports = {
   buildTaskSelection,
   buildBody
 };
-
