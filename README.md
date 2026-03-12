@@ -1,12 +1,12 @@
 # Quasuki SDK First Live Run
 
-Standalone external-consumer demo repo for `quasuki-sdk@0.2.4`.
+Standalone external-consumer demo repo for `quasuki-sdk@0.2.5`.
 
 This repo is intentionally outside the Quasuki workspace repos so it proves a real npm consumer path rather than an internal file-reference path.
 
 ## What It Proves
 
-- install `quasuki-sdk@0.2.4` from npm
+- install `quasuki-sdk@0.2.5` from npm
 - fetch the live Quasuki catalog from `https://console.quasuki.com`
 - execute one real paid task through the published SDK
 - save reproducible JSON artifacts under `artifacts/`
@@ -16,7 +16,7 @@ This repo is intentionally outside the Quasuki workspace repos so it proves a re
 Package install from a blank Node project:
 
 ```bash
-npm install quasuki-sdk@0.2.4
+npm install quasuki-sdk@0.2.5
 ```
 
 Repo install:
@@ -130,4 +130,4 @@ The auto-onboard path stores account and wallet ids, but it does not persist `ap
 
 - npm package: `https://www.npmjs.com/package/quasuki-sdk`
 - repository: `https://github.com/quasuki/quasuki-sdk`
-- release: `https://github.com/quasuki/quasuki-sdk/releases/tag/v0.2.4`
+- release: `https://github.com/quasuki/quasuki-sdk/releases/tag/v0.2.5`
