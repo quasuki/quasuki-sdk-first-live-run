@@ -1,0 +1,19 @@
+{
+  "name": "quasuki-sdk-first-live-run",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Standalone external consumer proof for quasuki-sdk@0.2.3.",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "catalog": "node scripts/catalog.js",
+    "first-live-run": "node scripts/first-live-run.js",
+    "first-live-run:auto": "node scripts/first-live-run-auto.js",
+    "verify": "npm run catalog"
+  },
+  "dependencies": {
+    "quasuki-sdk": "0.2.3"
+  }
+}
