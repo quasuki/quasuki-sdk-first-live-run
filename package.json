@@ -14,6 +14,6 @@
     "verify": "npm run catalog"
   },
   "dependencies": {
-    "quasuki-sdk": "file:../vscode_workspace/quasuki/quasuki-sdk/quasuki-sdk-0.2.3.tgz"
+    "quasuki-sdk": "0.2.3"
   }
 }
