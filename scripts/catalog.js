@@ -1,5 +1,7 @@
 "use strict";
 
+const fs = require("fs");
+const path = require("path");
 const { createClient, QUASUKI_SDK_NAME, QUASUKI_SDK_VERSION } = require("quasuki-sdk");
 const { ensureArtifactsDir, baseUrlFromEnv } = require("./shared");
 
